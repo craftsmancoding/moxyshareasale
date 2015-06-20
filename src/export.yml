@@ -1,0 +1,10 @@
+# Mappings use a colon followed by a space (: ) to mark each key/value pair
+# Format is {MODX-Field-Name} : {XLS-Column-Name}
+# If you don't wish to export a field, delete that row from this config file,
+# comment it out out using a '#', or leave the XLS column name blank.
+# If a single MODX field should be written to multiple columns, use square brackets
+# to define an array, e.g. pagetitle: [columnone,columntwo].
+moxycart2xls:
+    product_id: product_id
+    store_id: store_id
+    name: name

@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Moxy Share a Sale : Excel Export Utility
+ *
+ *
+ * USAGE
+ * -------
+ *
+ * php moxyshareasale <function> [arguments]
+ *
+ * php moxyshareasale help [function-name]
+ *
+ */
+
+ini_set('max_execution_time', 0);
+
+require_once dirname(__FILE__).'/vendor/autoload.php';
+
+
+use Moxyshareasale\Console\Command\MoxyShareaSaleCommand;
+use Symfony\Component\Console\Application;
+
+$modx = get_modx();
+$modx->initialize('mgr');
+
+$application = new Application('moxyshareasale', '1.0');
+
+$application->add(new MoxyShareaSaleCommand());
+$application->run();
+
+/*EOF*/
