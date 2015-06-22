@@ -95,15 +95,19 @@ class MoxyShareaSaleCommand extends Command
 
         if ($Products = $this->modx->getCollectionGraph('Product', '{"Image":{}}', $criteria)) {
             $row = 2;
+            $output->writeln('Beginning export of '.count($Products).' products @ '.date('Y-m-d H:is'));
             foreach($Products as $prod) {
                 foreach($headers as $field => $col)
                 {
 
-                    $v = $prod->get($field);
-
-                    $W->setCellValue($col.$row, $v);
+                    if($field == 'merchantId') {
+                        $W->setCellValue($col.$row, $merchant_id);
+                    } else {
+                        $v = $prod->get($field);
+                        $W->setCellValue($col.$row, $v);
+                    }
                 }
-
+                $output->writeln($prod->get('name'));
                 $row++;
             }
 

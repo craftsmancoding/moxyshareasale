@@ -5,6 +5,17 @@
 # If a single MODX field should be written to multiple columns, use square brackets
 # to define an array, e.g. pagetitle: [columnone,columntwo].
 moxycart2xls:
-    product_id: product_id
-    store_id: store_id
-    name: name
+    sku: SKU
+    name: Name
+    uri: URL to Product
+    price: Price
+    price_sale: Retail Price
+    Image.thumbnail_url: URL to thumbnail Image
+    commission : Commission #not map to moxycart yet
+    category : Category
+    subcategory : SubCategory #not map to moxycart yet
+    description : Description
+    search_terms : Search Terms #not map to moxycart yet
+    is_active : Status
+    merchantId : Your Merchant ID
+
