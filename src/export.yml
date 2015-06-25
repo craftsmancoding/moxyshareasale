@@ -11,11 +11,8 @@ moxycart2xls:
     price: Price
     price_sale: Retail Price
     Image.thumbnail_url: URL to thumbnail Image
-    commission : Commission #not map to moxycart yet
     category : Category
-    subcategory : SubCategory #not map to moxycart yet
     description : Description
-    search_terms : Search Terms #not map to moxycart yet
     is_active : Status
     merchantId : Your Merchant ID
 
